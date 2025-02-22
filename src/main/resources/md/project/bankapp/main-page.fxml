@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: D9D9D9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="md.project.bankapp.MainPageController">
+   <children>
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#e9e9e9" height="261.0" layoutX="610.0" layoutY="100.0" stroke="#3f0072" strokeType="INSIDE" strokeWidth="0.0" width="249.0" />
+      <Pane layoutX="27.0" layoutY="15.0" prefHeight="560.0" prefWidth="257.0" style="-fx-background-color: E9E9E9; -fx-background-radius: 7px;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="99.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/bank.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="91.0" prefHeight="34.0" prefWidth="57.0" text="ABC" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Dashboard" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="39.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/home.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="transactionsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToTransactions" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Transactions" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="profileButton" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="355.0" mnemonicParsing="false" onAction="#goToProfileButton" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Profile" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="33.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/handshake.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="35.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/user.png" />
+               </image>
+            </ImageView>
+            <Line endX="111.80270385742188" layoutX="113.0" layoutY="436.0" startX="-91.82197570800781" stroke="#5c00a8" strokeWidth="3.0" />
+            <Button fx:id="logoutButton" alignment="CENTER" layoutX="17.0" layoutY="474.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="208.0" style="-fx-background-color: #5c00a8;" text="Logout" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutX="128.0" layoutY="91.0" prefHeight="34.0" prefWidth="66.0" text="Bank" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="315.0" layoutY="50.0" text="Hi," textFill="#3f0072">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="112.0" text="My Account" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateNow" layoutX="777.0" layoutY="57.0" text="date.now()" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#3f0072" height="143.0" layoutX="315.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="271.0" />
+      <Label fx:id="balanceLabel" layoutX="343.0" layoutY="182.0" prefHeight="28.0" prefWidth="156.0" text="0000.00" textFill="#dddddd">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="506.0" layoutY="163.0" text="ABC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="541.0" layoutY="163.0" text="Bank" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="343.0" layoutY="244.0" text="**** **** ****" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Rectangle fill="WHITE" height="83.0" layoutX="535.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="36.0" />
+      <Label layoutX="692.0" layoutY="112.0" text="Send money" textFill="#3f0072">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="152.0" text="Payee username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="629.0" layoutY="221.0" text="Amount" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="payeeUserNameTextField" layoutX="629.0" layoutY="184.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="amountTextField" layoutX="629.0" layoutY="250.0" prefHeight="26.0" prefWidth="214.0" />
+      <Button fx:id="sendMoneyButton" alignment="CENTER" layoutX="629.0" layoutY="300.0" mnemonicParsing="false" onAction="#sendMoney" prefHeight="40.0" prefWidth="214.0" style="-fx-background-color: #5c00a8;" text="Send money" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="315.0" layoutY="363.0" text="Latest Transactions" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="transaction1" arcHeight="7.0" arcWidth="7.0" fill="#e9e9e9" height="40.0" layoutX="314.0" layoutY="403.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="544.0" />
+      <Label fx:id="transactionDate1" layoutX="321.0" layoutY="412.0" text="date" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionSender1" layoutX="450.0" layoutY="412.0" prefHeight="23.0" prefWidth="126.0" text="sender username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionReceiver1" layoutX="609.0" layoutY="412.0" prefHeight="23.0" prefWidth="126.0" text="reciever username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionAmount1" layoutX="777.0" layoutY="412.0" text="amount" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="transaction2" arcHeight="7.0" arcWidth="7.0" fill="#e9e9e9" height="40.0" layoutX="314.0" layoutY="459.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="544.0" />
+      <Label fx:id="transactionDate2" layoutX="321.0" layoutY="468.0" text="date" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionSender2" layoutX="450.0" layoutY="468.0" prefHeight="23.0" prefWidth="126.0" text="sender username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionReceiver2" layoutX="609.0" layoutY="468.0" prefHeight="23.0" prefWidth="126.0" text="reciever username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionAmount2" layoutX="777.0" layoutY="468.0" text="amount" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="transaction3" arcHeight="7.0" arcWidth="7.0" fill="#e9e9e9" height="40.0" layoutX="314.0" layoutY="514.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="544.0" />
+      <Label fx:id="transactionDate3" layoutX="321.0" layoutY="523.0" text="date" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionSender3" layoutX="450.0" layoutY="523.0" prefHeight="23.0" prefWidth="126.0" text="sender username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionReceiver3" layoutX="609.0" layoutY="523.0" prefHeight="23.0" prefWidth="126.0" text="reciever username" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="transactionAmount3" layoutX="777.0" layoutY="523.0" text="amount" textFill="#3f0072">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="noUserFoundErrorLabel" alignment="CENTER" layoutX="630.0" layoutY="212.0" prefHeight="17.0" prefWidth="214.0" textFill="RED" />
+      <Label fx:id="invalidAmountErrorLabel" alignment="CENTER" layoutX="628.0" layoutY="276.0" prefHeight="17.0" prefWidth="214.0" textFill="RED" />
+      <Label fx:id="userName" layoutX="354.0" layoutY="50.0" text="name" textFill="#3f0072">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountNumberLabel" layoutX="427.0" layoutY="241.0" text="3245 7864" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

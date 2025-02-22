@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: D9D9D9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="md.project.bankapp.ProfilePageController">
+   <children>
+      <Pane layoutX="27.0" layoutY="15.0" prefHeight="560.0" prefWidth="257.0" style="-fx-background-color: E9E9E9; -fx-background-radius: 7px;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="99.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/bank.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="72.0" layoutY="91.0" prefHeight="34.0" prefWidth="57.0" text="ABC" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="dashboardButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="168.0" mnemonicParsing="false" onAction="#goToDashBoard" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Dashboard" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="39.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/home.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="transactionsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="260.0" mnemonicParsing="false" onAction="#goToTransactions" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Transactions" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="355.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="208.0" style="-fx-background-color: D9D9D9;" text="Profile" textFill="#5c00a8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="33.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/handshake.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="35.0" layoutY="369.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/user.png" />
+               </image>
+            </ImageView>
+            <Line endX="111.80270385742188" layoutX="113.0" layoutY="436.0" startX="-91.82197570800781" stroke="#5c00a8" strokeWidth="3.0" />
+            <Button fx:id="logoutButton" alignment="CENTER" layoutX="17.0" layoutY="474.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="208.0" style="-fx-background-color: #5c00a8;" text="Logout" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label alignment="CENTER" layoutX="128.0" layoutY="91.0" prefHeight="34.0" prefWidth="66.0" text="Bank" textAlignment="CENTER" textFill="#5c00a8">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="318.0" layoutY="38.0" text="Account information" textFill="#3f0072">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="-100.0" endY="313.5" layoutX="418.0" layoutY="88.0" startX="-100.0" stroke="#5c00a8" strokeWidth="3.0" />
+      <Label layoutX="338.0" layoutY="95.0" text="Account number" textFill="#a18db2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountNumber" layoutX="338.0" layoutY="131.0" text="222 222">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="175.0" text="Transaction Limit (per day)" textFill="#a18db2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="248.0" text="Date created" textFill="#a18db2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="328.0" text="Balance" textFill="#a18db2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountBalance" layoutX="338.0" layoutY="365.0" text="30000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="creationDate" layoutX="338.0" layoutY="284.0" text="30000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="338.0" layoutY="207.0" text="10">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="696.0" layoutY="38.0" text="Move funds" textFill="#3f0072">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amountField" layoutX="682.0" layoutY="94.0" promptText="enter amount" />
+      <Button fx:id="transferFundsButton" alignment="CENTER" layoutX="683.0" layoutY="155.0" mnemonicParsing="false" onAction="#transfer" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #5c00a8;" text="Transfer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="686.0" layoutY="123.0" prefHeight="17.0" prefWidth="153.0" textFill="RED" />
+   </children>
+</AnchorPane>
